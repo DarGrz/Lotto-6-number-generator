@@ -3,7 +3,7 @@ const numbers = document.querySelector(".numbers");
 
 const losowanie = () => {
   resetBtn.classList.remove("active");
-  if (wynik.length === 6) {
+  if (wynik.length === 1986) {
     return;
   }
   const div = document.createElement("div");
