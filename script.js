@@ -1,41 +1,29 @@
-const result = [];
-const container = document.querySelector("#container");
+const wynik = [];
+const numbers = document.querySelector(".numbers");
 
 const losowanie = () => {
-  reset.classList.remove("active");
-  if (result.length === 6) {
+  resetBtn.classList.remove("active");
+  if (wynik.length === 6) {
     return;
   }
-
   const div = document.createElement("div");
-  div.classList.add("poleLiczbowe");
-
-  const wynikLosowania = [
-    Math.floor(Math.random() * 49 + 1),
-    Math.floor(Math.random() * 49 + 1),
-    Math.floor(Math.random() * 49 + 1),
-    Math.floor(Math.random() * 49 + 1),
-    Math.floor(Math.random() * 49 + 1),
-    Math.floor(Math.random() * 49 + 1),
-  ];
-
-  for (let i = 0; i < result.length; i++) {
-    if (wynikLosowania === result[i]) {
-      return losowanie;
-    }
+  div.classList.add("spanel");
+  var arr = [];
+  while (arr.length < 6) {
+    var r = Math.floor(Math.random() * 49) + 1;
+    if (arr.indexOf(r) === -1) arr.push(r);
   }
-  console.log(wynikLosowania);
+  wynik.push(arr);
 
-  div.innerHTML = wynikLosowania.map((num) => `<span>${num}</span>`).join(" ");
-
-  container.appendChild(div);
-  result.push(wynikLosowania);
+  div.innerHTML = arr.map((num) => `<span>${num}</span>`).join("");
+  numbers.appendChild(div);
 };
 
-const onResetHandler = () => {
+const resetHandler = function () {
   location.reload();
 };
 
-const button = document.querySelector("button");
-button.addEventListener("click", losowanie);
-reset.addEventListener("click", onResetHandler);
+const btnLos = document.querySelector(".btn-los");
+const resetBtn = document.querySelector(".reset");
+resetBtn.addEventListener("click", resetHandler);
+btnLos.addEventListener("click", losowanie);
