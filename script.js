@@ -2,6 +2,7 @@ const result = [];
 const container = document.querySelector("#container");
 
 const losowanie = () => {
+  reset.classList.remove("active");
   if (result.length === 6) {
     return;
   }
@@ -31,5 +32,10 @@ const losowanie = () => {
   result.push(wynikLosowania);
 };
 
+const onResetHandler = () => {
+  location.reload();
+};
+
 const button = document.querySelector("button");
 button.addEventListener("click", losowanie);
+reset.addEventListener("click", onResetHandler);

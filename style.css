@@ -14,6 +14,7 @@ button {
   font-weight: 700;
   font-size: 25px;
   padding: 20px;
+  margin-bottom: 25px;
   border: none;
   outline: none;
   border-radius: 20px;
@@ -34,6 +35,22 @@ button:active {
   border-radius: 20px;
   box-shadow: inset -3px -3px 7px #ffffff73,
     inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+
+.reset {
+  margin: auto;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 100px;
+}
+
+.active {
+  display: none;
+  color: red;
 }
 
 #container {
