@@ -1,9 +1,11 @@
 const result = [];
+const container = document.querySelector("#container");
 
 const losowanie = () => {
   if (result.length === 6) {
     return;
   }
+
   const div = document.createElement("div");
   div.classList.add("poleLiczbowe");
 
@@ -25,7 +27,7 @@ const losowanie = () => {
 
   div.innerHTML = wynikLosowania.map((num) => `<span>${num}</span>`).join(" ");
 
-  document.body.appendChild(div);
+  container.appendChild(div);
   result.push(wynikLosowania);
 };
 
