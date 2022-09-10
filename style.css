@@ -1,15 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 body {
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: #dde1e7;
   justify-content: center;
+  font-family: "Lato", sans-serif;
 }
 
 button {
   background-color: #dde1e7;
   color: #777;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 25px;
   padding: 20px;
   border: none;
@@ -66,4 +68,25 @@ button:active {
   text-align: center;
   display: grid;
   place-items: center;
+}
+
+@media (max-width: 800px) {
+  button {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+  button:active {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+
+  .poleLiczbowe span {
+    height: 15px;
+    width: 15px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+  }
 }
