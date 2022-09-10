@@ -13,6 +13,9 @@ const losowanie = () => {
     var r = Math.floor(Math.random() * 49) + 1;
     if (arr.indexOf(r) === -1) arr.push(r);
   }
+  arr.sort(function (a, b) {
+    return a - b;
+  });
   wynik.push(arr);
 
   div.innerHTML = arr.map((num) => `<span>${num}</span>`).join("");
