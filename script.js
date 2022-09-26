@@ -8,7 +8,7 @@ const losowanie = () => {
   }
   const div = document.createElement("div");
   div.classList.add("spanel");
-  var arr = [];
+  var arr = [6];
   while (arr.length < 6) {
     var r = Math.floor(Math.random() * 49) + 1;
     if (arr.indexOf(r) === -1) arr.push(r);

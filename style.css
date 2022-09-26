@@ -19,6 +19,7 @@ body {
 
 .btn-los {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
