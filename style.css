@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .btn-los {
@@ -29,7 +29,6 @@ button {
   font-weight: 700;
   font-size: 25px;
   padding: 10px;
-  margin-bottom: 25px;
   border: none;
   outline: none;
   border-radius: 10px;
@@ -68,10 +67,6 @@ button:active {
 
 .active {
   display: none;
-}
-
-.numbers .spanel {
-  margin: 25px 0;
 }
 
 .spanel {
