@@ -25,6 +25,9 @@ const losowanie = () => {
   numbers.appendChild(div);
 };
 const losowanieEuro = () => {
+  if (wynik.length === 1) {
+    return;
+  }
   resetBtn.classList.remove("active");
   const div = document.createElement("div");
   const div2 = document.createElement("div");
@@ -43,6 +46,14 @@ const losowanieEuro = () => {
     if (arrB.indexOf(r) === -1) arrB.push(r);
   }
   // var arr = [...arrA, ...arrB];
+
+  arrA.sort(function (a, b) {
+    return a - b;
+  });
+
+  arrB.sort(function (a, b) {
+    return a - b;
+  });
 
   wynik.push(arrA);
   wynik2.push(arrB);
