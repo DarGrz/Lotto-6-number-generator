@@ -3,6 +3,7 @@ const wynik2 = [];
 const numbers = document.querySelector(".numbers");
 const numbersEuro = document.querySelector(".numbersEuro");
 const numbersEuro2 = document.querySelector(".numbersEuro2");
+const spanel = document.querySelector(".spanel");
 
 const losowanie = () => {
   resetBtn.classList.remove("active");
@@ -20,10 +21,6 @@ const losowanie = () => {
     return a - b;
   });
   wynik.push(arr);
-  if (arr[0] < 9) {
-    console.log("Num smaller than 9");
-  }
-
   div.innerHTML = arr.map((num) => `<span>${num}</span>`).join("");
   numbers.appendChild(div);
 };
