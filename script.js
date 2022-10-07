@@ -20,17 +20,23 @@ const losowanie = () => {
     return a - b;
   });
   wynik.push(arr);
+  if (arr[0] < 9) {
+    console.log("Num smaller than 9");
+  }
 
   div.innerHTML = arr.map((num) => `<span>${num}</span>`).join("");
   numbers.appendChild(div);
 };
+
+// Losowanie Euro Jack Pot
 const losowanieEuro = () => {
-  if (wynik2.length === 1) {
+  if (wynik2.length === 6) {
     return;
   }
   resetBtn.classList.remove("active");
   const div = document.createElement("div");
   const div2 = document.createElement("div");
+
   div.classList.add("spanel");
   div.classList.add("euro");
   div2.classList.add("spanel");
@@ -45,7 +51,6 @@ const losowanieEuro = () => {
     var r = Math.floor(Math.random() * 12) + 1;
     if (arrB.indexOf(r) === -1) arrB.push(r);
   }
-  // var arr = [...arrA, ...arrB];
 
   arrA.sort(function (a, b) {
     return a - b;
@@ -60,7 +65,7 @@ const losowanieEuro = () => {
   div.innerHTML = arrA.map((num) => `<span>${num}</span>`).join("");
   div2.innerHTML = arrB.map((num) => `<span>${num}</span>`).join("");
   numbersEuro.appendChild(div);
-  numbersEuro2.appendChild(div2);
+  numbersEuro.appendChild(div2);
 };
 
 const resetHandler = function () {
