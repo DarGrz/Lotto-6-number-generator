@@ -15,7 +15,7 @@ body {
   justify-content: center;
   margin: auto;
   margin-top: 25px;
-  width: 20rem;
+  width: 90%;
 }
 
 img {
@@ -91,19 +91,22 @@ button:active {
   box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
   text-align: center;
   font-weight: bold;
-  font-size: 22px;
   background-color: #dde1e7;
-  height: 25px;
-  width: 25px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
   margin: 5px;
-  padding: 15px;
+  padding: 5px;
 }
 
 @media (min-width: 1000px) {
+  .container {
+    width: 30rem;
+  }
   .spanel span {
-    font-size: 22px;
-    padding: 15px;
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
   }
 
   img {
