@@ -48,6 +48,12 @@ img {
   margin: auto;
 }
 
+.numbers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .btn-los {
   display: flex;
   flex-direction: column;
@@ -67,9 +73,6 @@ button {
   box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
 }
 
-button:hover {
-}
-
 button:active {
   background-color: #dde1e7;
   color: #777;
@@ -83,7 +86,8 @@ button:active {
     inset 3px 3px 5px rgba(94, 104, 121, 0.288);
 }
 
-.reset button {
+.reset button,
+button.btnCopy {
   margin: auto;
   margin-top: 25px;
   display: flex;
