@@ -88,6 +88,8 @@ btnCopy.addEventListener("click", (e) => {
     content5,
     content6,
   };
+
+  
 });
 
 const btnLos = document.querySelector(".btn-los");
