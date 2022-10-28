@@ -4,9 +4,6 @@ const numbers = document.querySelector(".numbers");
 const numbersEuro = document.querySelector(".numbersEuro");
 const numbersEuro2 = document.querySelector(".numbersEuro2");
 const spanel = document.querySelector(".spanel");
-const btnCopy = document.createElement("button");
-btnCopy.classList.add("btnCopy");
-btnCopy.innerHTML = "Copy";
 
 const losowanie = () => {
   resetBtn.classList.remove("active");
@@ -26,7 +23,6 @@ const losowanie = () => {
   wynik.push(arr);
   div.innerHTML = arr.map((num) => `<span>${num}</span>`).join("");
   numbers.appendChild(div);
-  numbers.appendChild(btnCopy);
 };
 
 // Losowanie Euro Jack Pot
@@ -67,30 +63,12 @@ const losowanieEuro = () => {
   div2.innerHTML = arrB.map((num) => `<span>${num}</span>`).join("");
   numbersEuro.appendChild(div);
   numbersEuro.appendChild(div2);
+  console.log(div);
 };
 
 const resetHandler = function () {
   location.reload();
 };
-
-btnCopy.addEventListener("click", (e) => {
-  const content1 = document.querySelector("span").textContent;
-  const content2 = document.querySelector("span:nth-child(2)").textContent;
-  const content3 = document.querySelector("span:nth-child(3)").textContent;
-  const content4 = document.querySelector("span:nth-child(4)").textContent;
-  const content5 = document.querySelector("span:nth-child(5)").textContent;
-  const content6 = document.querySelector("span:nth-child(6)").textContent;
-  let numbersCopy = {
-    content1,
-    content2,
-    content3,
-    content4,
-    content5,
-    content6,
-  };
-
-  
-});
 
 const btnLos = document.querySelector(".btn-los");
 const btnLosEuro = document.querySelector(".btn-los-euro");
