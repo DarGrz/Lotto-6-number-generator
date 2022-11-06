@@ -23,6 +23,7 @@ const losowanie = () => {
   wynik.push(arr);
   div.innerHTML = arr.map((num) => `<span>${num}</span>`).join("");
   numbers.appendChild(div);
+  numbers.style.display = "block";
 };
 
 // Losowanie Euro Jack Pot
@@ -63,7 +64,7 @@ const losowanieEuro = () => {
   div2.innerHTML = arrB.map((num) => `<span>${num}</span>`).join("");
   numbersEuro.appendChild(div);
   numbersEuro.appendChild(div2);
-  console.log(div);
+  numbersEuro.style.display = "block";
 };
 
 const resetHandler = function () {
