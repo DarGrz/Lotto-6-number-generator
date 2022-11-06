@@ -30,7 +30,21 @@ body {
   text-decoration: none;
   color: #777;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
+}
+
+.nav-link a:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(253, 182, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main {
+  height: 90vh;
 }
 
 .container {
@@ -71,6 +85,7 @@ button {
   outline: none;
   border-radius: 10px;
   box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
+  cursor: pointer;
 }
 
 button:active {
@@ -96,7 +111,6 @@ button:active {
   text-align: center;
   max-width: 100px;
   font-size: 18px;
-
   padding: 10px;
   color: #777;
 }
@@ -134,6 +148,20 @@ button:active {
   border-radius: 50%;
   margin: 5px;
   padding: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  text-align: center;
+  color: #777;
+}
+
+.footer .container {
+  margin: auto;
+  padding: 20px;
 }
 
 @media (min-width: 1000px) {
