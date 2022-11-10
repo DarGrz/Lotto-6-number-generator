@@ -43,6 +43,16 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.date {
+  text-align: center;
+}
+
+#hour {
+  font-size: 22px;
+  margin-top: 2px;
+  color: #777;
+}
+
 .main {
   height: 90vh;
 }

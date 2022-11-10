@@ -26,7 +26,7 @@ const losowanie = () => {
   numbers.style.display = "block";
 };
 
-// Losowanie Euro Jack Pot
+// Losowanie Euro JackPot
 const losowanieEuro = () => {
   if (wynik2.length === 6) {
     return;
