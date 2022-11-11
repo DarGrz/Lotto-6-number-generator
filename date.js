@@ -9,6 +9,7 @@ function clock() {
   const seconds = date.getSeconds();
   showDate = document.querySelector("#date");
   showHour = document.querySelector("#hour");
+  showDay = document.querySelector("#dayOfTheWeek");
 
   switch (day) {
     case 1:
@@ -36,9 +37,11 @@ function clock() {
       day = day;
   }
 
+  showDay.innerHTML = day;
+
   showHour.innerHTML = hour + ":" + minutes + ":" + seconds;
 
-  showDate.innerHTML = day + " " + dayOfMonth + "/" + month + "/" + year;
+  showDate.innerHTML = dayOfMonth + "/" + month + "/" + year;
 }
 clock();
 setInterval(clock, 1000);
