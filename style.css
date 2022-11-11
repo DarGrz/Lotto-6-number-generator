@@ -7,6 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 .navbar {
@@ -58,19 +59,15 @@ body {
 }
 
 #hour {
-  font-size: 35px;
+  font-size: 10px;
   color: #777;
-}
-
-.main {
-  height: 90vh;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: auto;
+  margin: 25px auto;
   margin-top: 25px;
   width: 90%;
 }
@@ -79,6 +76,13 @@ img {
   width: 50%;
   object-fit: cover;
   margin: auto;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .numbers {
@@ -138,6 +142,10 @@ button:active {
   display: none;
 }
 
+#btnSubmit {
+  width: 25%;
+}
+
 .spanel {
   display: flex;
   justify-content: center;
@@ -191,6 +199,10 @@ button:active {
     width: 45px;
     height: 45px;
     font-size: 25px;
+  }
+
+  #hour {
+    font-size: 22px;
   }
 
   img {

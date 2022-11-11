@@ -4,11 +4,17 @@ const numbers = document.querySelector(".numbers");
 const numbersEuro = document.querySelector(".numbersEuro");
 const numbersEuro2 = document.querySelector(".numbersEuro2");
 const spanel = document.querySelector(".spanel");
+const copyTxt = document.querySelector(".euro-btn");
 
 const losowanie = () => {
   resetBtn.classList.remove("active");
+  // Liczba możliwych losowań
   if (wynik.length === 6) {
     return;
+  }
+  // Ukrywa wyniki po pierwszym losowaniu
+  if (wynik.length >= 0) {
+    document.querySelector("#web-frame").style.display = "none";
   }
   const div = document.createElement("div");
   div.classList.add("spanel");
