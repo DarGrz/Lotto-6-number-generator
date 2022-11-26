@@ -5,6 +5,7 @@ const numbersEuro = document.querySelector(".numbersEuro");
 const numbersEuro2 = document.querySelector(".numbersEuro2");
 const spanel = document.querySelector(".spanel");
 const copyTxt = document.querySelector(".euro-btn");
+const clipboard = document.querySelector("#clipboard");
 
 const losowanie = () => {
   resetBtn.classList.remove("active");
@@ -72,6 +73,24 @@ const losowanieEuro = () => {
   numbersEuro.appendChild(div2);
   numbersEuro.style.display = "block";
 };
+
+function copyToCli() {
+  console.log(numbers.innerText);
+  const textarea = document.createElement("textarea");
+  const copiedText = numbers.innerText;
+
+  if (!copiedText) {
+    return;
+  }
+
+  textarea.value = copiedText;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+}
+
+clipboard.addEventListener("click", copyToCli);
 
 const resetHandler = function () {
   location.reload();
