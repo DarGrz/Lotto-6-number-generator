@@ -9,6 +9,7 @@ const clipboard = document.querySelector("#clipboard");
 
 const losowanie = () => {
   resetBtn.classList.remove("active");
+  clipboard.classList.remove("active");
   // Liczba możliwych losowań
   if (wynik.length === 6) {
     return;
@@ -28,7 +29,8 @@ const losowanie = () => {
     return a - b;
   });
   wynik.push(arr);
-  div.innerHTML = arr.map((num) => `<span>${num}</span>`).join("");
+  div.innerHTML = arr.map((num) => `<span> ${num} </span>`).join("");
+
   numbers.appendChild(div);
   numbers.style.display = "block";
 };
@@ -39,6 +41,7 @@ const losowanieEuro = () => {
     return;
   }
   resetBtn.classList.remove("active");
+  clipboard.classList.remove("active");
   const div = document.createElement("div");
   const div2 = document.createElement("div");
 
@@ -75,7 +78,7 @@ const losowanieEuro = () => {
 };
 
 function copyToCli() {
-  console.log(numbers.innerText);
+  console.log(numbers);
   const textarea = document.createElement("textarea");
   const copiedText = numbers.innerText;
 

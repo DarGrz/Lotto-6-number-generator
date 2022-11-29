@@ -124,7 +124,8 @@ button:active {
     inset 3px 3px 5px rgba(94, 104, 121, 0.288);
 }
 
-.reset button {
+.reset button,
+.clipboard button {
   margin: auto;
   margin-top: 25px;
   display: flex;
@@ -136,6 +137,11 @@ button:active {
   font-size: 18px;
   padding: 10px;
   color: #777;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
 }
 
 .active {
