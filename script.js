@@ -29,7 +29,7 @@ const losowanie = () => {
     return a - b;
   });
   wynik.push(arr);
-  div.innerHTML = arr.map((num) => `<span> ${num} </span>`).join("");
+  div.innerHTML = arr.map((num) => `<span>${num}</span> `).join("");
 
   numbers.appendChild(div);
   numbers.style.display = "block";
@@ -78,9 +78,10 @@ const losowanieEuro = () => {
 };
 
 function copyToCli() {
-  console.log(numbers);
   const textarea = document.createElement("textarea");
-  const copiedText = numbers.innerText;
+  const copiedText = numbers.innerText.split(/\r?\n/);
+
+  console.log(copiedText);
 
   if (!copiedText) {
     return;
