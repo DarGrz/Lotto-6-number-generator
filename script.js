@@ -30,6 +30,7 @@ const losowanie = () => {
   });
   wynik.push(arr);
   div.innerHTML = arr.map((num) => `<span>${num}</span> `).join("");
+  console.log(arr);
 
   numbers.appendChild(div);
   numbers.style.display = "block";

@@ -55,12 +55,22 @@ body {
 
 #dayOfTheWeek,
 #date {
-  font-size: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
 }
 
 #hour {
-  font-size: 10px;
+  font-size: 16px;
   color: #777;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
