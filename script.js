@@ -80,9 +80,10 @@ const losowanieEuro = () => {
 
 function copyToCli() {
   const textarea = document.createElement("textarea");
-  const copiedText = numbers.innerText.split(/\r?\n/);
+  // const copiedText = numbers.innerText.split(/\r?\n/);
+  const copiedText = wynik;
 
-  console.log(copiedText);
+  console.log(wynik);
 
   if (!copiedText) {
     return;

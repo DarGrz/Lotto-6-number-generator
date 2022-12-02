@@ -4,9 +4,12 @@ function clock() {
   let dayOfMonth = (date.getDate() < 10 ? "0" : "") + date.getDate();
   let month = (date.getMonth() + 1 < 10 ? "0" : "") + (date.getMonth() + 1);
   const year = date.getFullYear();
-  const hour = date.getHours();
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
+  const hour = (date.getHours() + 1 < 10 ? "0" : "") + (date.getHours() + 1);
+  const minutes =
+    (date.getMinutes() + 1 < 10 ? "0" : "") + (date.getMinutes() + 1);
+  const seconds =
+    (date.getSeconds() + 1 < 10 ? "0" : "") + (date.getSeconds() + 1);
+
   showDate = document.querySelector("#date");
   showHour = document.querySelector("#hour");
   showDay = document.querySelector("#dayOfTheWeek");
