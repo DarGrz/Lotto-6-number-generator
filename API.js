@@ -1,5 +1,6 @@
 function getLottoDrawResult() {
-  const yourUrl = "http://serwis.mobilotto.pl/mapi_v6/index.php?json=getGames";
+  const yourUrl =
+    "https://www.lotto.pl/api/lotteries/draw-results/by-gametype?game=Lotto&index=1&size=10&sort=drawDate&order=DESC";
   fetch(yourUrl, {
     headers: {},
   })
