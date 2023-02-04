@@ -65,6 +65,20 @@ body {
   font-size: 12px;
 }
 
+.draws span,
+.draws h3 {
+  box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  color: #777;
+}
+
+.draws h3 {
+  text-align: center;
+}
+
 #hour {
   font-size: 16px;
   color: #777;
